@@ -1,1 +1,1 @@
-# Personal-Website
+# This is my personal website made during the Summer of 2025, one of my first projects.
