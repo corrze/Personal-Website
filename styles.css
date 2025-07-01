@@ -68,15 +68,66 @@ header {
     padding: 2rem 0;
 }
 
-.header-container {
+.header-content {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
     animation: slideDown 0.8s ease-out;
 }
 
 #keyframes slideDown {
     from {transform: translateY(-100%); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #e4e4e7;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 2px 8px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.1);
+    transform: translateY(-2px);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 80%;
 }
