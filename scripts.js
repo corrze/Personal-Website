@@ -1,4 +1,4 @@
-const observerOptions = {threshold: 0.25, rootMargin: '0px 0px -20% 0px'};
+const observerOptions = {threshold: 0.5, rootMargin: '0px 0px -25% 0px'};
 const loader = document.getElementById('loading-screen');
 
 // Create an IntersectionObserver to handle the fade-in effect
