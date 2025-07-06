@@ -34,6 +34,25 @@ document.querySelectorAll('.interest-card').forEach(card => {
     });
 });
 
+
+// Smooth scrolling for anchor links
+// This will enable smooth scrolling when clicking on links that point to sections within the same page
+// It prevents the default jump behavior and animates the scroll to the target element
+// This is useful for single-page applications or sections within a page
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
 // Parallax effect for particles
 // This will create a parallax effect where particles move at different speeds based on scroll position
 // Each particle will move at a speed proportional to its index
