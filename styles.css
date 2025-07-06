@@ -7,10 +7,10 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Seogoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: black;
     color: #e4e4e7;
     line-height: 1.6;
     background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -68,7 +68,7 @@ header {
     padding: 2rem 0;
 }
 
-.header-content {
+.header-box {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -130,4 +130,57 @@ nav a::after {
 
 nav a:hover::after {
     width: 80%;
+}
+
+main {
+    padding: 4rem;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    text-align: center;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #bdc6f8, #6a38ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+
+}
+
+.hero .name {
+    font-size: 4rem;
+    font-weight: 700;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    background: repeating-linear-gradient(45deg, #60a5fa, #60a5fa 10px, #a78bfa 10px, #a78bfa 20px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: #e4e4e7;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    margin: center 1rem auto;
 }
