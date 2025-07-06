@@ -184,3 +184,183 @@ main {
     font-weight: 300;
     margin: center 1rem auto;
 }
+
+.cta-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    position: relative; /* changes the boxes to be where the text is */
+    border-radius: 10px; /* rounded corners */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none; /* removes underline */
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+
+.btn-secondary {
+    background: #333333;
+    color: #e8e0ff;
+    border: 1px solid rgba(167, 139, 250, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px)
+}
+
+/* Interests/skills section */
+.interests {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1s ease-out 0.6s both;
+    
+}
+
+.interests h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.interest-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.interest-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+    transform:  translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.interest-card:hover::before {
+    transform: scaleX(1);
+}
+
+.interest-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #77aef7;
+}
+
+.interest-card p {
+    font-size: 0.9rem;
+    color: #e4e4e7;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-box {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    .contrainer {
+        padding: 0 1rem;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes pulse {
+    0% , 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s ease-in-out infinite;
+}
