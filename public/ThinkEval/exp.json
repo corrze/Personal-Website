@@ -1,0 +1,1206 @@
+[
+  {
+    "Fictional Characters": [
+      "Westleigh",
+      "Foot-Guard",
+      "Peshwaship",
+      "Maulana"
+    ],
+    "Abstract Nouns": [
+      "Town",
+      "Parade",
+      "Culture",
+      "Tourists"
+    ],
+    "Emotions/Experiences": [
+      "Participate",
+      "Surprised",
+      "Delighted",
+      "Spectacle"
+    ],
+    "Geographic Locations or Terms": [
+      "East",
+      "West",
+      "Heritage",
+      "Display"
+    ],
+    "id": 0,
+    "method": "cot"
+  },
+  {
+    "Names": [
+      "Sierra",
+      "Harmonica",
+      "Bella",
+      "Cytozoon"
+    ],
+    "Verbs": [
+      "Contracted",
+      "Decreased",
+      "Escalate",
+      "Distract"
+    ],
+    "Abstract Nouns": [
+      "Disease",
+      "Codenization",
+      "Digital",
+      "Revelation"
+    ],
+    "Emotions": [
+      "Humble",
+      "Desperate",
+      "Anxious",
+      "De-stressed"
+    ],
+    "id": 1,
+    "method": "cot"
+  },
+  {
+    "Occupations": [
+      "Craftsman",
+      "Puzzle designer",
+      "Architect",
+      "Woodworker"
+    ],
+    "Synonyms for Complex": [
+      "Peculiar",
+      "Intricate",
+      "Convoluted",
+      "Dense"
+    ],
+    "Types of Puzzles": [
+      "Puzzlings",
+      "Riddles",
+      "Secrets",
+      "Solutions"
+    ],
+    "Woodworking Terms": [
+      "Lubricous",
+      "Workbench",
+      "Grains",
+      "Architrave"
+    ],
+    "id": 2,
+    "method": "cot"
+  },
+  {
+    "Common Flowers": [
+      "pentadecyl",
+      "rose",
+      "lilac",
+      "lotus"
+    ],
+    "Parts of a Flower": [
+      "prophyll",
+      "petal",
+      "stamen",
+      "sepal"
+    ],
+    "Intense Emotions": [
+      "bedumbing",
+      "awestruck",
+      "stunned",
+      "amazed"
+    ],
+    "Textile Processes": [
+      "mercerizes",
+      "bleaching",
+      "dyeing",
+      "weaving"
+    ],
+    "id": 3,
+    "method": "cot"
+  },
+  {
+    "Olden Occupations": [
+      "Mercery",
+      "Cooper",
+      "Girdler",
+      "Cordwainer"
+    ],
+    "Geometric Shapes": [
+      "Hexagrammoid",
+      "Decahedron",
+      "Parallelogram",
+      "Octahedron"
+    ],
+    "Dichotomous Characteristics": [
+      "Beautifier",
+      "Destroyer",
+      "Saviour",
+      "Conqueror"
+    ],
+    "Elements of Folklore": [
+      "Statue",
+      "Tale",
+      "Myth",
+      "Legend"
+    ],
+    "id": 4,
+    "method": "cot"
+  },
+  {
+    "Synonyms for Reluctance to Change": [
+      "nonadaptor",
+      "resistant",
+      "intransigent",
+      "traditional"
+    ],
+    "Slang for Technology Enthusiasts": [
+      "geek",
+      "techie",
+      "whizz",
+      "nerd"
+    ],
+    "Fictional Character Names": [
+      "Amit",
+      "Saumont",
+      "Virus",
+      "Data"
+    ],
+    "Fill-in-the-blank \u2013 \"_______ to have lost all his data due to a virus attack\"": [
+      "pretending",
+      "claiming",
+      "feigning",
+      "positing"
+    ],
+    "id": 8,
+    "method": "cot"
+  },
+  {
+    "Nonsensical Words": [
+      "Nonsensical",
+      "babble",
+      "gibberish",
+      "prattle"
+    ],
+    "Fictional Locations": [
+      "Gibblegabble",
+      "Neverland",
+      "Oz",
+      "Narnia"
+    ],
+    "Symbols of Friendship": [
+      "Pimplous",
+      "bracelets",
+      "matching tattoos",
+      "secret handshakes"
+    ],
+    "Milling Tools": [
+      "Millstone",
+      "regrinds",
+      "flour",
+      "grindstone"
+    ],
+    "id": 9,
+    "method": "cot"
+  },
+  {
+    "Synonyms": [
+      "Majestic",
+      "Stellar",
+      "Graceful",
+      "Enchanting"
+    ],
+    "English Vocabulary": [
+      "Boon",
+      "Bane",
+      "Dwarfed",
+      "Venture"
+    ],
+    "Random Words": [
+      "Forest",
+      "Creature",
+      "Gait",
+      "Danger"
+    ],
+    "Common Phrases": [
+      "\"____ laden\"",
+      "\"____ glow\"",
+      "\"____ beauty\"",
+      "\"____ persona\""
+    ],
+    "id": 10,
+    "method": "cot"
+  },
+  {
+    "Fish Types": [
+      "Oscar",
+      "Goldfish",
+      "Betta",
+      "Guppy"
+    ],
+    "Minerals": [
+      "Quartz",
+      "Feldspar",
+      "Mica",
+      "Inyoite"
+    ],
+    "Terms Related to Fisheries": [
+      "Chum",
+      "Net",
+      "Tackle",
+      "Esp."
+    ],
+    "Verbs Related to Opening": [
+      "Unlatch",
+      "Unseal",
+      "Uncap",
+      "Crank"
+    ],
+    "id": 15,
+    "method": "cot"
+  },
+  {
+    "Scientific Terms": [
+      "Visceroinhibitory",
+      "Photolytic",
+      "Biologist",
+      "Reactions"
+    ],
+    "Adjectives": [
+      "Unreal",
+      "Ancient",
+      "Renowned",
+      "Fantastical"
+    ],
+    "Terms Related to Caves": [
+      "Depths",
+      "Dark",
+      "Glow",
+      "Cave"
+    ],
+    "Terms Related to Plants": [
+      "Vegetation",
+      "Plant",
+      "Flora",
+      "Consumption"
+    ],
+    "id": 17,
+    "method": "cot"
+  },
+  {
+    "Forms of Deception": [
+      "personation",
+      "camouflage",
+      "masquerade",
+      "duplicity"
+    ],
+    "Academic Administrative Titles": [
+      "subwarden",
+      "provost",
+      "registrar",
+      "chancellor"
+    ],
+    "Extreme Weather Terms": [
+      "EWO",
+      "cyclone",
+      "blizzard",
+      "drought"
+    ],
+    "Ethnic and Racial Descriptors": [
+      "blackfellow",
+      "afro-caribbean",
+      "aboriginal",
+      "maori"
+    ],
+    "id": 18,
+    "method": "cot"
+  },
+  {
+    "Professions in Science": [
+      "meteorologist",
+      "mathematician",
+      "biologist",
+      "physicist"
+    ],
+    "Types of Boats": [
+      "gondola",
+      "kayak",
+      "dinghy",
+      "alilonghi"
+    ],
+    "Types of Waves": [
+      "sinusoidal",
+      "square",
+      "sawtooth",
+      "anisotropic"
+    ],
+    "Reactions to Disagreements": [
+      "brushoffs",
+      "rebut",
+      "defend",
+      "acquiesce"
+    ],
+    "id": 21,
+    "method": "cot"
+  },
+  {
+    "Abstract Nouns": [
+      "Numda",
+      "Laughter",
+      "Shrewdnesses",
+      "Decorousnesses"
+    ],
+    "Expressions of Happiness": [
+      "Joy",
+      "Norm",
+      "Risibility",
+      "Echoing"
+    ],
+    "Characteristics of Numda's Inhabitants": [
+      "Renowned",
+      "Complex problem-solving",
+      "Unparalleled",
+      "Elegant"
+    ],
+    "Characteristics of High Society": [
+      "Proper",
+      "Harmonious",
+      "Nuances of language",
+      "Grace"
+    ],
+    "id": 22,
+    "method": "cot"
+  },
+  {
+    "Acronyms of Organizations": [
+      "NASA",
+      "FEMA",
+      "UNESCO",
+      "BSHA"
+    ],
+    "Communicative Actions": [
+      "conversation",
+      "debate",
+      "introspection",
+      "investigation"
+    ],
+    "Bioactive Compounds": [
+      "caffeine",
+      "morphine",
+      "adrenaline",
+      "nicotine"
+    ],
+    "Music Formats": [
+      "LP",
+      "CD",
+      "MP3",
+      "EP"
+    ],
+    "id": 23,
+    "method": "cot"
+  },
+  {
+    "Fictional Towns": [
+      "Anatifae",
+      "Brigadoon",
+      "Royston Vasey",
+      "Absurdistan"
+    ],
+    "Expressions of Tiredness": [
+      "Hagged",
+      "Knackered",
+      "Fatigued",
+      "Weary"
+    ],
+    "Concepts of Infinity": [
+      "Inexhaustibility",
+      "Infinity",
+      "Endlessness",
+      "Unboundedness"
+    ],
+    "Slang Terms for Money": [
+      "Moolah",
+      "Buck",
+      "Dough",
+      "Loot"
+    ],
+    "id": 24,
+    "method": "cot"
+  },
+  {
+    "Equipment for Ground Maintenance": [
+      "Lawn-roller",
+      "Mower",
+      "Rake",
+      "Leaf Blower"
+    ],
+    "Small Towns in Iowa": [
+      "Sheldahl",
+      "Lehigh",
+      "Alleman",
+      "Elkhart"
+    ],
+    "Natural Skin Moisturizers": [
+      "Nangca",
+      "Aloe Vera",
+      "Shea Butter",
+      "Coconut Oil"
+    ],
+    "Festive Activities/Events": [
+      "Lawn-roller Competition",
+      "Fireworks Display",
+      "Parade",
+      "Lantern Festival."
+    ],
+    "id": 27,
+    "method": "cot"
+  },
+  {
+    "City Elements": [
+      "Central-fire",
+      "Landmark",
+      "System",
+      "Phenomenon"
+    ],
+    "Mythology and Fantasy": [
+      "Boreades",
+      "Mythic",
+      "Fantasy",
+      "Anecdote"
+    ],
+    "Environmental Consciousness": [
+      "Ecostate",
+      "Sustainable",
+      "Practices",
+      "Belief"
+    ],
+    "Factors Influencing Attraction": [
+      "Cyclitic",
+      "Crowds",
+      "Residents",
+      "Everywhere"
+    ],
+    "id": 28,
+    "method": "cot"
+  },
+  {
+    "Crime Fiction Characters": [
+      "detective",
+      "Bittner",
+      "serial killer",
+      "victim"
+    ],
+    "Crime Investigation Terminologies": [
+      "case",
+      "signature",
+      "strangling",
+      "identity"
+    ],
+    "Geology-Related Words": [
+      "rare",
+      "mineral",
+      "calcspars",
+      "detail"
+    ],
+    "Analytical Process Terms": [
+      "analytical",
+      "challenge",
+      "analysable",
+      "key"
+    ],
+    "id": 33,
+    "method": "cot"
+  },
+  {
+    "Types of Settlements": [
+      "town",
+      "community",
+      "realm",
+      "domicile"
+    ],
+    "Colors": [
+      "sleepy",
+      "turquoise",
+      "well-hued",
+      "rainbow"
+    ],
+    "Abstract Concepts": [
+      "three-ranked",
+      "center",
+      "entrance",
+      "worth"
+    ],
+    "Indicators of Social Status": [
+      "matron",
+      "purse-pride",
+      "dignified",
+      "existence"
+    ],
+    "id": 34,
+    "method": "cot"
+  },
+  {
+    "Numbers in Words": [
+      "thirtieth",
+      "third",
+      "thirty",
+      "three"
+    ],
+    "Book Parts": [
+      "deckle",
+      "edge",
+      "page",
+      "book"
+    ],
+    "Transparent Items": [
+      "crystal",
+      "clear",
+      "water",
+      "reef"
+    ],
+    "Underwater Flora": [
+      "Pennatae",
+      "species",
+      "grow",
+      "underwater"
+    ],
+    "id": 35,
+    "method": "cot"
+  },
+  {
+    "Mythical Creatures": [
+      "Fey",
+      "Aversant",
+      "Monster",
+      "Pythius"
+    ],
+    "Paranormal Abilities": [
+      "Macrocornea",
+      "Clairvoyance",
+      "Remote Viewing",
+      "Astral Projection"
+    ],
+    "States of Disrepair": [
+      "Dilapidated",
+      "Crumbling",
+      "Decayed",
+      "Ruined"
+    ],
+    "Actions Related to Overcoming Adversities": [
+      "Courage",
+      "Defeat",
+      "Confront",
+      "Overcome"
+    ],
+    "id": 36,
+    "method": "cot"
+  },
+  {
+    "States of Mind": [
+      "Misguided",
+      "Redemption",
+      "Dependency",
+      "Peace"
+    ],
+    "Desert Conditions": [
+      "Sun",
+      "Harsh",
+      "Solarizes",
+      "Cooked"
+    ],
+    "Substance Abuse and Recovery": [
+      "Methhead",
+      "Counterblows",
+      "Addiction",
+      "Rehab"
+    ],
+    "Aspects of Urban Decay": [
+      "Trailer",
+      "Ramshackle",
+      "Grimy",
+      "Shady"
+    ],
+    "id": 37,
+    "method": "cot"
+  },
+  {
+    "Locations": [
+      "Lafitte",
+      "Willow",
+      "Depressed-Bed",
+      "Town"
+    ],
+    "Reptiles": [
+      "Anguineous",
+      "Serpent",
+      "Creature",
+      "Townsfolk"
+    ],
+    "Emotions/Feelings": [
+      "Adored",
+      "Confounded",
+      "Thinking",
+      "Befuddlement"
+    ],
+    "Mathematical Concepts": [
+      "Zero-Divisor",
+      "Problem",
+      "Riddle",
+      "Solve"
+    ],
+    "id": 38,
+    "method": "cot"
+  },
+  {
+    "Hawaiian Islands and Cities": [
+      "Oahu",
+      "Honolulu",
+      "Hilo",
+      "Kealakekua"
+    ],
+    "Synonyms for Mixture": [
+      "Melange",
+      "Mixture",
+      "Assortment",
+      "Medley"
+    ],
+    "Historical Fashion Items": [
+      "Corset",
+      "Ruff",
+      "Rebato",
+      "Bloomers"
+    ],
+    "Insects Preserved in Amber": [
+      "Beetle",
+      "Fly",
+      "Opiliones",
+      "Ant"
+    ],
+    "id": 39,
+    "method": "cot"
+  },
+  {
+    "Church Personnel": [
+      "vicar",
+      "sexton",
+      "deacon",
+      "sacrists"
+    ],
+    "Evolutionary Hominids": [
+      "Australopithecus",
+      "Homo habilis",
+      "Propliopithecus",
+      "Neanderthal"
+    ],
+    "Abstract Concepts": [
+      "conceptual",
+      "ideative",
+      "theoretical",
+      "hypothetical"
+    ],
+    "Biological Processes": [
+      "photosynthesis",
+      "respiration",
+      "fermentation",
+      "zymome"
+    ],
+    "id": 40,
+    "method": "cot"
+  },
+  {
+    "Construction Materials and Places": [
+      "Ceiling beams",
+      "Repair shop",
+      "Work",
+      "Old"
+    ],
+    "Time-related Terms": [
+      "Late",
+      "Postliminous",
+      "Day\u2019s hardship",
+      "Upcoming"
+    ],
+    "Difficulty and Effort Indicators": [
+      "Double-barred",
+      "Laborousness",
+      "Task",
+      "Challenge"
+    ],
+    "Prepositions": [
+      "Under",
+      "Into",
+      "Of",
+      "To"
+    ],
+    "id": 41,
+    "method": "cot"
+  },
+  {
+    "Italian Words": [
+      "Carne",
+      "Carnivale",
+      "Steak",
+      "Festival"
+    ],
+    "Personality Traits": [
+      "Superstrict",
+      "Innovative",
+      "Homomallous",
+      "Carefree"
+    ],
+    "Metal and Related Items": [
+      "Austenitic",
+      "Steel",
+      "Pan",
+      "Dishes"
+    ],
+    "Cooking Terminology": [
+      "Portion",
+      "Flavor",
+      "Recipe",
+      "Taste"
+    ],
+    "id": 42,
+    "method": "cot"
+  },
+  {
+    "Occupations": [
+      "underkeeper",
+      "farmer",
+      "zookeeper",
+      "janitor"
+    ],
+    "Activities": [
+      "traversing",
+      "tending",
+      "dreaming",
+      "scavenging"
+    ],
+    "Actions of Change": [
+      "laicizing",
+      "reforming",
+      "revolutionizing",
+      "democratizing"
+    ],
+    "Social Roles": [
+      "crust-hunter",
+      "scavenger",
+      "pioneer",
+      "underdog"
+    ],
+    "id": 44,
+    "method": "cot"
+  },
+  {
+    "Musical Instruments": [
+      "Clarinet",
+      "Guitar",
+      "Violin",
+      "Flute"
+    ],
+    "Color Descriptors": [
+      "Bright",
+      "Pastel",
+      "Diluted",
+      "Saturated"
+    ],
+    "Types of Windows": [
+      "Jalousie",
+      "Bay",
+      "Sash",
+      "Casement"
+    ],
+    "Dutch Origin Words in English": [
+      "Yacht",
+      "Bastaard",
+      "Freebooter",
+      "Landscape"
+    ],
+    "id": 46,
+    "method": "cot"
+  },
+  {
+    "Forest and Nature": [
+      "forest",
+      "tree",
+      "branches",
+      "boughs"
+    ],
+    "Adjectives": [
+      "timeless",
+      "majestic",
+      "extraordinary",
+      "perpetual"
+    ],
+    "Verbs": [
+      "scampering",
+      "jumped",
+      "swishing",
+      "showcasing"
+    ],
+    "Unusual Words/Things in the Forest": [
+      "Tin",
+      "Pin",
+      "human",
+      "hands"
+    ],
+    "id": 47,
+    "method": "tot"
+  },
+  {
+    "Life Cycles": [
+      "seeds",
+      "nurturing",
+      "pathway",
+      "growth"
+    ],
+    "Time and Seasons": [
+      "seasons",
+      "spring",
+      "rhythm",
+      "cycles"
+    ],
+    "Personification": [
+      "unsaddened",
+      "undeterred",
+      "aimless",
+      "robust"
+    ],
+    "Trees": [
+      "birch",
+      "cedar",
+      "pine",
+      "spruce"
+    ],
+    "id": 49,
+    "method": "tot"
+  },
+  {
+    "Noun Describing Nature or Natural Phenomenon": [
+      "rainforest",
+      "oak",
+      "canopy",
+      "wilderness"
+    ],
+    "Adjective Portraying a Positive Emotion": [
+      "unblemished",
+      "unsaddened",
+      "regerminated",
+      "uncharted"
+    ],
+    "Scientific or Technical Terms": [
+      "atelopodia",
+      "Conversi",
+      "species",
+      "pierce"
+    ],
+    "Verbs Related to Sound": [
+      "hummed",
+      "reverberated",
+      "whispering",
+      "twinkled"
+    ],
+    "id": 50,
+    "method": "tot"
+  },
+  {
+    "Tropical Places": [
+      "heat",
+      "sun",
+      "sweltering",
+      "blazing"
+    ],
+    "Technology and Software": [
+      "software",
+      "security",
+      "systems",
+      "algorithms"
+    ],
+    "Resilience and Excellence": [
+      "resilience",
+      "whispers",
+      "glances",
+      "demeanor"
+    ],
+    "Vintage and Age": [
+      "aging",
+      "working",
+      "operating",
+      "aged"
+    ],
+    "id": 52,
+    "method": "tot"
+  },
+  {
+    "Names and Places": [
+      "San",
+      "Vicente",
+      "Rafael",
+      "Caribbean"
+    ],
+    "Moods and Emotions": [
+      "Genial",
+      "Spectacular",
+      "Profound",
+      "Soulful"
+    ],
+    "Traditional and Cultural References": [
+      "Retired",
+      "Past",
+      "Vintage",
+      "Memories"
+    ],
+    "Language and Communication": [
+      "Story",
+      "Job",
+      "Life",
+      "Hustle"
+    ],
+    "id": 54,
+    "method": "tot"
+  },
+  {
+    "Images of Age": [
+      "old",
+      "vintage",
+      "lifestyle",
+      "youth"
+    ],
+    "Musical Elements": [
+      "synth",
+      "musical",
+      "melody",
+      "sound"
+    ],
+    "Job Titles or Roles": [
+      "tales",
+      "stories",
+      "life",
+      "treasures"
+    ],
+    "Emotional Expressions": [
+      "aura",
+      "elegance",
+      "charisma",
+      "serenity"
+    ],
+    "id": 55,
+    "method": "tot"
+  },
+  {
+    "Atmospheric conditions": [
+      "Sun",
+      "Coral",
+      "Tropical",
+      "Sun-drenched"
+    ],
+    "Figures of influence": [
+      "Advanced",
+      "Subtle",
+      "Mastered",
+      "Invisible"
+    ],
+    "Clothing and Attire": [
+      "Guayabera",
+      "Silent",
+      "Device",
+      "Clad"
+    ],
+    "Time-related Terms": [
+      "Passing",
+      "Minute",
+      "Today",
+      "Day"
+    ],
+    "id": 56,
+    "method": "tot"
+  },
+  {
+    "Unfamiliar Vocabulary": [
+      "Omophagist",
+      "Unorthodox",
+      "Heaving",
+      "Eccentric"
+    ],
+    "Geographic Features": [
+      "Village",
+      "Abode",
+      "Serene",
+      "Beacon"
+    ],
+    "Physical Descriptions": [
+      "Feet",
+      "Hunched",
+      "Limbs",
+      "Standing"
+    ],
+    "Personality Characteristics": [
+      "Notorious",
+      "Magnificent",
+      "Potent",
+      "Mesmerizing"
+    ],
+    "id": 57,
+    "method": "tot"
+  },
+  {
+    "Words Associated with Fear": [
+      "Fear",
+      "Heart",
+      "Expectant",
+      "Faces"
+    ],
+    "Uncommon Nouns": [
+      "Daze",
+      "Cave",
+      "Morn",
+      "Dawn"
+    ],
+    "Words Associated with Transformation": [
+      "Respect",
+      "Realized",
+      "Turned",
+      "Again"
+    ],
+    "Descriptive Words": [
+      "Sacred",
+      "Orange",
+      "Red-letter",
+      "Cherubic"
+    ],
+    "id": 58,
+    "method": "tot"
+  },
+  {
+    "Synonyms for Unusual": [
+      "Peculiar",
+      "Strange",
+      "Unlikely",
+      "Riddle"
+    ],
+    "Synonyms for Challenges": [
+      "Instinct",
+      "Lifestyle",
+      "Choices",
+      "Cravings"
+    ],
+    "Noteworthy New York": [
+      "New York",
+      "Steakhouse",
+      "City",
+      "Skyscrapers"
+    ],
+    "Human Descriptors": [
+      "Shoulders",
+      "Hunched",
+      "Stature",
+      "Physical"
+    ],
+    "id": 59,
+    "method": "tot"
+  },
+  {
+    "Artistic Techniques": [
+      "sculpture",
+      "texture",
+      "gallery",
+      "creating"
+    ],
+    "Human Anatomy": [
+      "human",
+      "ear",
+      "bone",
+      "heart"
+    ],
+    "Geographical Features": [
+      "quaint",
+      "vibrant",
+      "sacred",
+      "heritage"
+    ],
+    "Emotional Attributes": [
+      "curious",
+      "energy",
+      "masterpiece",
+      "completion"
+    ],
+    "id": 61,
+    "method": "tot"
+  },
+  {
+    "Art Movements": [
+      "Symphonic",
+      "Intricate",
+      "Melodic",
+      "Masterpiece"
+    ],
+    "Emotions and Reactions": [
+      "Awe",
+      "Curiosity",
+      "Belief",
+      "Profound"
+    ],
+    "Sensory Experiences": [
+      "Textures",
+      "Visual",
+      "Auditory",
+      "Sensation"
+    ],
+    "Art Creation": [
+      "Brush",
+      "Strokes",
+      "Artist",
+      "Painting"
+    ],
+    "id": 62,
+    "method": "tot"
+  },
+  {
+    "Art Media": [
+      "Canvases",
+      "Colors",
+      "Stain",
+      "Hues"
+    ],
+    "Emotional States": [
+      "Passion",
+      "Resilience",
+      "Pathos",
+      "Creativity"
+    ],
+    "Act of Creativity": [
+      "Painted",
+      "Wove",
+      "Imbued",
+      "Marred"
+    ],
+    "Uniqueness": [
+      "Multifarious",
+      "Eclectic",
+      "Secretive",
+      "Unspoilt"
+    ],
+    "id": 63,
+    "method": "tot"
+  },
+  {
+    "Abstract Concepts": [
+      "passion",
+      "emotions",
+      "despair",
+      "joy"
+    ],
+    "Unique Words": [
+      "kinesthetic",
+      "overhover",
+      "postexpressionist",
+      "overensing"
+    ],
+    "Artistry": [
+      "sculptor",
+      "art",
+      "sculptures",
+      "painting"
+    ],
+    "Nouns Related to Arts": [
+      "texture",
+      "abstraction",
+      "sculpture",
+      "marble"
+    ],
+    "id": 65,
+    "method": "tot"
+  }
+]

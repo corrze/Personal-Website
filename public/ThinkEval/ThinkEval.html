@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuzzleEval - Word Grouping Game</title>
+    <link rel="stylesheet" href="puzz_styles.css">
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+      <div class="evaluate-container">
+        <h1>Play Generated Puzzles</h1>
+        <div class="instructions">
+          <p>Instructions: Click generate to make a new puzzle. Select 4 words that you think belong to the same category, then click send. Rate the puzzle good or bad after you're done.</p>
+        </div>
+        
+        <div id="message" class="message">
+          Select 4 words that belong to the same category
+        </div>
+        
+        <div id="result-overlay" class="result-overlay">
+          <div id="result-icon" class="result-icon"></div>
+        </div>
+        <div id="board">
+    
+        </div>
+    
+        <div class="model-col">
+        <label for="model-select" class="debug-label">Choose a model:</label>
+        <select id="model-select" name="model" class="debug-select">
+            <option value="bart-mnli">BART-MNLI</option>
+            <option value="ada-002">ADA-002</option>
+            <option value="all-mpnet-base-v2">All-MPNet Base-v2</option>
+            <option value="flan-ul2">Flan-UL2</option>
+            <option value="llama-2">LLAMA-2</option>
+            <option value="gpt-4">GPT-4</option>
+        </select>
+        <div class="board"></div>
+    
+        <div id="buttons" class="buttons">
+          <button id="generate" class="submit" type="button">Generate</button>
+          <button id="good" class="vote" type="button">Good</button>
+          <button id="bad" class="vote" type="button">Bad</button>
+          <button id="send" class="submit" type="button">Send</button>
+        </div>
+    
+      </div>
+
+      <!-- Custom Puzzle Creation Section -->
+      <div class="puzzle-creator-container">
+        <h1>Create Your Own Puzzle</h1>
+        <div class="instructions">
+          <p>Create your own Connections puzzle! Enter 4 words for each category with their descriptions. Categories are ordered from easiest (blue) to hardest (purple). Once created, you can share your puzzle with others via a link!</p>
+        </div>
+
+        <div class="creator-form">
+          <!-- Blue Category (Easiest) -->
+          <div class="category-input blue-category">
+            <h3>Category 1 (Easiest)</h3>
+            <label for="blue-words">Words (comma-separated):</label>
+            <input type="text" id="blue-words" placeholder="e.g., Apple, Orange, Banana, Grape" maxlength="100">
+            <label for="blue-description">Category Description:</label>
+            <input type="text" id="blue-description" placeholder="e.g., Fruits" maxlength="50">
+          </div>
+
+          <!-- Green Category -->
+          <div class="category-input green-category">
+            <h3>Category 2</h3>
+            <label for="green-words">Words (comma-separated):</label>
+            <input type="text" id="green-words" placeholder="e.g., Red, Blue, Green, Yellow" maxlength="100">
+            <label for="green-description">Category Description:</label>
+            <input type="text" id="green-description" placeholder="e.g., Colors" maxlength="50">
+          </div>
+
+          <!-- Yellow Category -->
+          <div class="category-input yellow-category">
+            <h3>Category 3</h3>
+            <label for="yellow-words">Words (comma-separated):</label>
+            <input type="text" id="yellow-words" placeholder="e.g., Run, Jump, Walk, Skip" maxlength="100">
+            <label for="yellow-description">Category Description:</label>
+            <input type="text" id="yellow-description" placeholder="e.g., Actions" maxlength="50">
+          </div>
+
+          <!-- Purple Category (Hardest) -->
+          <div class="category-input purple-category">
+            <h3>Category 4 (Hardest)</h3>
+            <label for="purple-words">Words (comma-separated):</label>
+            <input type="text" id="purple-words" placeholder="e.g., Bass, Sole, Flounder, Halibut" maxlength="100">
+            <label for="purple-description">Category Description:</label>
+            <input type="text" id="purple-description" placeholder="e.g., Fish" maxlength="50">
+          </div>
+
+          <!-- Puzzle Metadata -->
+          <div class="puzzle-metadata">
+            <label for="puzzle-title">Puzzle Title:</label>
+            <input type="text" id="puzzle-title" placeholder="My Custom Puzzle" maxlength="50">
+            <label for="puzzle-author">Author:</label>
+            <input type="text" id="puzzle-author" placeholder="Your Name" maxlength="30">
+          </div>
+
+          <!-- Preview Section -->
+          <div class="puzzle-preview">
+            <h3>Preview</h3>
+            <div id="preview-board" class="preview-grid">
+              <!-- Preview tiles will be generated here -->
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="creator-buttons">
+            <button id="preview-puzzle" class="submit" type="button">Preview Puzzle</button>
+            <button id="play-custom" class="submit" type="button" disabled>Play Custom Puzzle</button>
+            <button id="share-puzzle" class="submit" type="button" disabled>Share Puzzle</button>
+            <button id="clear-form" class="secondary" type="button">Clear Form</button>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
