@@ -84,3 +84,10 @@ document.querySelectorAll('a[href]').forEach(link => {
         }, 300); // Adjust the delay as needed
     });
 });
+
+function toggleExpand(card) {
+    document.querySelectorAll('.class-card.expanded').forEach(c => {
+        if (c !== card) c.classList.remove('expanded');
+    });
+    card.classList.toggle('expanded');
+}

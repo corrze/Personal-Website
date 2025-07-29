@@ -30,8 +30,9 @@
         <header>
             <div class="header-box">
                 <nav>
+                    <a href="index.html">Home</a>
+                    <a href="journey.html">Journey</a>
                     <a href="projects.html">Projects</a>
-                    <a hfef="resume.pdf" target="_blank">Resume</a>
                     <a href="contact.html">Contact</a>
                 </nav>
             </div>
@@ -49,8 +50,8 @@
             </div>
 
             <div class = cta-section>
-                <a href="projects.html" class="btn btn-primary">View My Work</a>
-                <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+                <a href="journey.html" class="btn btn-primary">View my Journey</a>
+                <a href="projects.html" class="btn btn-secondary">Portfolio</a>
             </div>
 
             <div class="interests">
@@ -91,21 +92,122 @@
 
             <div class="class-section">
                 <h2>Relevant Classes</h2>
-                <p>Here are some of the classes I have taken that are relevant to my interests and skills:</p>
+                <p>Click to learn about these classes</p>
                 <div class="class-list">
-                    <div class="class-card">
-                        <h3>Introduction to Computer Science</h3>
-                        <p>Learned the fundamentals of programming and problem-solving using Python.</p>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CS 12X Intro to Java Programming I/II/III</h3>
+                        </div>
+                        <span class="quarter-tag">2023-2024</span>
+                        <div class="class-details">
+                            <p>Learned the fundamentals of Java as well as data structures</p>
+                        </div>
                     </div>
-                    <div class="class-card">
-                        <h3>Data Structures and Algorithms</h3>
-                        <p>Studied various data structures and algorithms, focusing on efficiency and optimization.</p>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 311 - Foundation of Computing I</h3>
+                        </div>
+                        <span class="quarter-tag">Summer 2024</span>
+                        <div class="class-details">
+                            <p>Introduction to discrete mathematics, including logic, set theory, and combinatorics.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 312 - Foundation of Computing II</h3>
+                        </div>
+                        <span class="quarter-tag">Fall 2024</span>
+                        <div class="class-details">
+                            <p>Advanced topics in discrete mathematics, including graph theory and algorithms.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 331 - Software Design and Implementation</h3>
+                        </div>
+                        <span class="quarter-tag">Fall 2025</span>
+                        <div class="class-details">
+                            <p>Learned software design principles, including object-oriented programming and design patterns.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 332 - Data Structures and Algorithms</h3>
+                        </div>
+                        <span class="quarter-tag">Winter 2025</span>
+                        <div class="class-details">
+                            <p>Studied various data structures and algorithms, focusing on efficiency and optimization.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 333 - Systems Programming</h3>
+                        </div>
+                        <span class="quarter-tag">Winter 2025</span>
+                        <div class="class-details">
+                            <p>Learned low-level programming concepts, including memory management and system calls.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 344 - Intro to Data Management </h3>
+                        </div>
+                        <span class="quarter-tag">Summer 2025</span>
+                        <div class="class-details">
+                            <p>Introduction to database systems, including SQL and data modeling.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 351 - Hardware/Software Interfaces</h3>
+                            <span class="favorite">★ Favorite</span>
+                        </div>
+                        <span class="quarter-tag">Summer 2024</span>
+                        <div class="class-details">
+                            <p>Understanding the interaction between hardware and software, including assembly language programming.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 391 - Systems Software and Tools </h3>
+                        </div>
+                        <span class="quarter-tag">Summer 2024</span>
+                        <div class="class-details">
+                            <p>Learned about system software, including compilers and interpreters.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 446 - Machine Learning</h3>
+                            <span class="favorite">★ Favorite</span>
+                        </div>
+                        <span class="quarter-tag">Spring 2025</span>
+                        <div class="class-details">
+                            <p>Introduction to machine learning concepts, including supervised and unsupervised learning.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 473 - Intro To Artificial Intelligence</h3>
+                        </div>
+                        <span class="quarter-tag">Spring 2025</span>
+                        <div class="class-details">
+                            <p>Introduction to AI concepts, including search algorithms, knowledge representation, and reasoning.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="toggleExpand(this)">
+                        <div class="class-header">
+                            <h3>CSE 449G1 - Deep learning</h3>
+                            <span class="favorite">★ Favorite</span>
+                        </div>
+                        <span class="quarter-tag">Spring 2025</span>
+                        <div class="class-details">
+                            <p>Advanced topics in deep learning, including neural networks and natural language processing.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        
     </main>
 
     <script src="scripts.js"></script>
