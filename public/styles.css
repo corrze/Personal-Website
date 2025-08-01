@@ -506,6 +506,83 @@ main {
     font-weight: 500;
 }
 
+
+
+.modal.fade-out {
+    opacity: 0;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
+    background: rgba(0, 0, 0, 0.7); /* Fixed typo: was "gba" */
+    backdrop-filter: blur(5px); /* Optional: adds blur effect */
+}
+
+.modal.fade-out {
+    opacity: 0;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #1a1a2e;
+    border-radius: 20px;
+    padding: 3rem;
+    z-index: 10000;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideIn 0.4s ease-out forwards;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+    color: #ccc;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #fff;
+}
+
+.modal.fade-out .modal-content {
+    animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
 footer {
     padding: 3.5rem;
     text-align: center;
