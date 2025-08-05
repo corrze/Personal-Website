@@ -978,17 +978,64 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    .header {
+        padding: 0;
+        margin-top: 0;
+    }
+
     .header-box {
         flex-direction: column;
         gap: 1rem;
+        border-radius: 0;
+        margin-top: 0;
+        padding-top: 1rem;
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     nav {
         gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: flex;
+    }
+
+    nav a {
+        /* make links more tappable */
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    nav a::after {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #60a5fa, #a78bfa);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    nav a:hover::after,
+    nav a:active::after {
+        width: 80%;
     }
 
     .container {
         padding: 0 1rem;
+        max-width: 100%;
+    }
+
+    main {
+        padding: 2rem 1rem;
     }
 
     .cta-section {
@@ -1000,6 +1047,9 @@ footer {
         width: 100%;
         max-width: 300px;
         justify-content: center;
+
+        min-width: 44px;
+        padding: 1rem 2rem;
     }
 
     .class-card {
@@ -1008,11 +1058,14 @@ footer {
 
     .journey-controls {
         flex-direction: column;
+        gap: 1rem;
     }
 
     .nav-btn, .explore-btn {
         width: 100%;
         max-width: 300px;
+        min-height: 44px;
+        font-size: 1rem;
     }
 
     .planet-selector {
@@ -1022,6 +1075,9 @@ footer {
     .planet {
         width: 50px;
         height: 50px;
+
+        min-width: 44px;
+        min-height: 44px;
     }
 
     .train-engine {
@@ -1048,6 +1104,19 @@ footer {
     .smoke {
         width: 6px;
         height: 6px;
+    }
+
+    .planet-name {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .journey-subtitle {
+        font-size: clamp(1.2rem, 6vw, 2rem);
+    }
+
+    .planet-description {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 }
 
