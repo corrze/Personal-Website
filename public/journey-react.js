@@ -1,7 +1,7 @@
 // Global planet variable
 let planets = [];
 
-function Train({ isVisible, planetColor}) {
+function Train({ isVisible, planetColor }) {
   return (
     <div className={`train-container ${isVisible ? 'visible' : ''}`}>
       <div className="train">
@@ -37,7 +37,7 @@ function Planet({ planet, isActive, onClick}) {
         boxShadow: `0 0 20px ${planet.color}44, inset 0 0 20px ${planet.color}22`
       }}
     >
-      <div className="planet-glow" style={{ background: planet.color}}></div>
+      <div className="planet-glow" style={{ backgroundColor: planet.color}}></div>
       <div className="planet-surface">
         <div className="crater crater-1"></div>
         <div className="crater crater-2"></div>
@@ -80,7 +80,7 @@ function Modal({ title, long, onClose }) {
   }, []);
 
   // Create portal to render modal at document.body level
- return ReactDOM.createPortal(
+  return ReactDOM.createPortal(
     <div className={`modal ${isClosing ? "fade-out" : ""}`} onClick={handleClose}>
       <div
         className="modal-content"
@@ -95,19 +95,68 @@ function Modal({ title, long, onClose }) {
   );
 }
 
+function LoadingScreen() {
+  return (
+    <div className="loading-screen">
+      <div className="spinner"></div>
+      <p className="loading-text">Loading planetary data...</p>
+    </div>
+  )
+}
+
+function ErrorScreen({ onRetry }) {
+  return (
+    <div className="error-screen">
+      <h2>Failed to Load Planets</h2>
+      <p>There was an error loading the planetary data.</p>
+      <button className="retry-btn" onClick={onRetry}>
+        Try Again
+      </button>
+    </div>
+  );
+}
+
 function TrainJourney() {
   const [currentPlanetIndex, setCurrentPlanetIndex] = React.useState(0);
   const [isTrainVisible, setIsTrainVisible] = React.useState(false);
   const [selectedPlanet, setSelectedPlanet] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
+  const [planetsData, setPlanetsData] = React.useState([]);
 
-  const currentPlanet = planets[currentPlanetIndex];
+  // Loading data from json
+  const loadPlanets = async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      const res = await fetch('./planets.json');
+      if (!res.ok) {
+        throw new Error(`HTTP error... Status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      planets = data.planets; // Global var set
+      setPlanetsData(data.planets);
+
+      // Train animation
+      setTimeout(() => {
+        setIsTrainVisible(true);
+      }, 500);
+
+    } catch (err) {
+      console.error('Error loading planets:', err);
+      setError(err.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsTrainVisible(true);
-    }, 500);
-    return () => clearTimeout(timer);
+    loadPlanets();
   }, []);
+
+  const currentPlanet = planetsData[currentPlanetIndex];
 
   const goToPlanet = (index) => {
     if (index !== currentPlanetIndex) {
@@ -128,6 +177,37 @@ function TrainJourney() {
     const prevIndex = (currentPlanetIndex - 1 + planets.length) % planets.length;
     goToPlanet(prevIndex);
   };
+
+  if (isLoading) {
+    return (
+      <div className="hero">
+        <LoadingScreen />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="hero">
+        <ErrorScreen onRetry={loadPlanets} />
+      </div>
+    );
+  }
+
+  // No planets loaded
+  if (!planetsData.length || !currentPlanet) {
+    return (
+      <div className="hero">
+        <div className="error-screen">
+          <h2> No Planets Found</h2>
+          <p> Unable to load planetary data.</p>
+          <button className="retry-btn" onClick={loadPlanets}>
+            Reload
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="hero">
