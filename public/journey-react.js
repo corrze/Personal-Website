@@ -74,13 +74,11 @@ function Modal({ title, long, onClose }) {
 
     //Prevent body scroll
     document.body.classList.add('modal-open');
-    document.body. style.overflow = 'hidden';
-    
-    // Cleanup
+
+
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.classList.remove('modal-open');
-    document.body. style.overflow = 'unset';
     };
   }, []);
 

@@ -66,20 +66,29 @@ body {
 /* Header styles */
 header {
     text-align: center;
-    padding: 2rem 0;
 }
 
 .header-box {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
+    flex-direction: row;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
     backdrop-filter: blur(10px);
     animation: slideDown 0.8s ease-out;
+    width: 100vw;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-box h1 { 
+    margin-bottom: 0.5rem;
+    background: linear-gradient(270deg, #bdc6f8, #6a38ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #keyframes slideDown {
@@ -99,12 +108,14 @@ header {
 nav {
     display: flex;
     gap: 1rem;
+    justify-content: flex-end;
+    margin-left: auto;
 }
 
 nav a {
     color: #e4e4e7;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -482,6 +493,9 @@ main {
     padding-top: 10vh;
     background: rgba(0, 0, 0, 0.7); /* Fixed typo: was "gba" */
     backdrop-filter: blur(5px); /* Optional: adds blur effect */
+
+    overflow-x: hidden;
+    overflow-y: auto;
 
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Seogoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #e4e4e7;
@@ -973,7 +987,7 @@ footer {
         gap: 1rem;
     }
 
-    .contrainer {
+    .container {
         padding: 0 1rem;
     }
 
