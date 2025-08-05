@@ -14,13 +14,18 @@ function Train({ isVisible, planetColor }) {
           </div>
         </div>
 
-        <div className="train-car" style={{ borderColor: planetColor}}>
+        <div className="train-car" style={{ borderColor: planetColor }}>
           <div className="train-wheel"></div>
           <div className="train-wheel"></div>
         </div>
-        <div className="train-car" style={{ borderColor: planetColor}}>
+        <div className="train-car" style={{ borderColor: planetColor }}>
           <div className="train-wheel"></div>
           <div className="train-wheel"></div>
+        </div>
+
+        <div className="train-tracks">
+          <div className="track-line"></div>
+          <div className="track-line"></div>
         </div>
       </div>
     </div>
@@ -169,12 +174,12 @@ function TrainJourney() {
   };
 
   const nextPlanet = () => {
-    const nextIndex = (currentPlanetIndex + 1) % planets.length;
+    const nextIndex = (currentPlanetIndex + 1) % planetsData.length;
     goToPlanet(nextIndex);
   };
 
   const prevPlanet = () => {
-    const prevIndex = (currentPlanetIndex - 1 + planets.length) % planets.length;
+    const prevIndex = (currentPlanetIndex - 1 + planetsData.length) % planetsData.length;
     goToPlanet(prevIndex);
   };
 
@@ -221,8 +226,8 @@ function TrainJourney() {
         <div className="journey-scene">
           <Train isVisible={isTrainVisible} planetColor={currentPlanet.color} />
 
-          <div className="planet-selector"></div>
-            {planets.map((planet, index) => (
+          <div className="planet-selector">
+            {planetsData.map((planet, index) => (
               <Planet
                 key={planet.id}
                 planet={planet}
@@ -247,6 +252,7 @@ function TrainJourney() {
             Next Planet →
           </button>
         </div>
+      </div>
 
         {selectedPlanet && (
           <Modal
