@@ -1,0 +1,52 @@
+{
+  "planets": [
+    {
+      "id": "school",
+      "name": "Planet Academia",
+      "title": "School",
+      "description": "Explore my journey at UW Seattle...",
+      "long": "Here's a detailed look at my academic journey — courses like Data Structures, ML, Systems, and more!",
+      "color": "#60a5fa"
+    },
+    {
+      "id": "corrbot",
+      "name": "Planet AI",
+      "title": "CorrBot",
+      "description": "Building my own LLM",
+      "long": "This project fine-tuned a personalized chatbot on my own messages using LLaMA 3 and QLoRA.",
+      "color": "#a78bfa"
+    },
+    {
+      "id": "thinkeval",
+      "name": "Planet Research",
+      "title": "ThinkEval",
+      "description": "NYT Connections Game research",
+      "long": "This benchmark evaluated reasoning capabilities using daily puzzles and transformer models.",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "studemon",
+      "name": "Planet Gaming",
+      "title": "Studemon",
+      "description": "Gamified flashcards",
+      "long": "Built a flashcard app with Pygame where you battle using quiz knowledge — inspired by Pokémon.",
+      "color": "#10b981"
+    },
+    {
+      "id": "artdev",
+      "name": "Planet Creative",
+      "title": "Art and Game Dev",
+      "description": "Explore how my hobbies go hand in hand",
+      "long": "I create both 2D/3D art and turn them into game assets and UI mockups for indie game projects",
+      "color": "#ef4444"
+    },
+    {
+      "id": "editing",
+      "name": "Planet Media",
+      "title": "Video Editing",
+      "description": "WIP...",
+      "long": "This section is under construction but will feature my Premiere Pro projects.",
+      "color": "#8b5cf6"
+    }
+  ]
+}
