@@ -1,47 +1,48 @@
-const cards = [
-  {
-    id: "school",
-    title: "School",
-    short: "Explore my journey at UW Seattle...",
-    long: "Here's a detailed look at my academic journey — courses like Data Structures, ML, Systems, and more!"
-  },
-  {
-    id: "corrbot",
-    title: "CorrBot",
-    short: "Building my own LLM",
-    long: "This project fine-tuned a personalized chatbot on my own messages using LLaMA 3 and QLoRA."
-  },
-  {
-    id: "thinkeval",
-    title: "ThinkEval",
-    short: "NYT Connections Game research",
-    long: "This benchmark evaluated reasoning capabilities using daily puzzles and transformer models."
-  },
-  {
-    id: "studemon",
-    title: "Studemon",
-    short: "Gamified flashcards",
-    long: "Built a flashcard app with Pygame where you battle using quiz knowledge — inspired by Pokémon."
-  },
-  {
-    id: "artdev",
-    title: "Art and Game Dev",
-    short: "Explore how my hobbies go hand in hand",
-    long: "I create both 2D/3D art and turn them into game assets and UI mockups for indie game projects"
-  },
-  {
-    id: "editing",
-    title: "Video Editing",
-    short: "WIP...",
-    long: "This section is under construction but will feature my Premiere Pro projects."
-  },
-];
+// Global planet variable
+let planets = [];
 
-function JourneyCard({ title, short, onOpen }) {
+function Train({ isVisible, planetColor}) {
   return (
-    <div className="interest-card" onClick={onOpen}>
-      <h3>{title}</h3>
-      <p>{short}</p>
+    <div className={`train-container ${isVisible ? 'visible' : ''}`}>
+      <div className="train">
+        <div className="train-engine" style={{ borderColor: planetColor }}>
+          <div className="train-window"></div>
+          <div className="train-smokestack">
+            <div className="smoke"></div>
+            <div className="smoke"></div>
+            <div className="smoke"></div>
+          </div>
+        </div>
+
+        <div className="train-car" style={{ borderColor: planetColor}}>
+          <div className="train-wheel"></div>
+          <div className="train-wheel"></div>
+        </div>
+        <div className="train-car" style={{ borderColor: planetColor}}>
+          <div className="train-wheel"></div>
+          <div className="train-wheel"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Planet({ planet, isActive, onClick}) {
+  return (
+    <div
+      className={`planet ${isActive ? 'active' : ''}`}
+      onClick = {onClick}
+      style = {{
+        background: `radial-gradient(circle at 30% 30%, ${planet.color}aa, ${planet.color}22)`,
+        boxShadow: `0 0 20px ${planet.color}44, inset 0 0 20px ${planet.color}22`
+      }}
+    >
+      <div className="planet-glow" style={{ background: planet.color}}></div>
+      <div className="planet-surface">
+        <div className="crater crater-1"></div>
+        <div className="crater crater-2"></div>
+        <div className="crater crater-3"></div>
+      </div>
     </div>
   );
 }
@@ -65,10 +66,16 @@ function Modal({ title, long, onClose }) {
     };
 
     document.addEventListener('keydown', handleKeyDown);
+
+    //Prevent body scroll
+    document.body.classList.add('modal-open');
+    document.body. style.overflow = 'hidden';
     
     // Cleanup
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
+      document.body.classList.remove('modal-open');
+    document.body. style.overflow = 'unset';
     };
   }, []);
 
@@ -88,38 +95,90 @@ function Modal({ title, long, onClose }) {
   );
 }
 
-function JourneyApp() {
-  const [openCardId, setOpenCardId] = React.useState(null);
-  const selectedCard = cards.find((c) => c.id === openCardId);
+function TrainJourney() {
+  const [currentPlanetIndex, setCurrentPlanetIndex] = React.useState(0);
+  const [isTrainVisible, setIsTrainVisible] = React.useState(false);
+  const [selectedPlanet, setSelectedPlanet] = React.useState(null);
+
+  const currentPlanet = planets[currentPlanetIndex];
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTrainVisible(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const goToPlanet = (index) => {
+    if (index !== currentPlanetIndex) {
+      setIsTrainVisible(false);
+      setTimeout(() => {
+        setCurrentPlanetIndex(index);
+        setIsTrainVisible(true);
+      }, 500);
+    }
+  };
+
+  const nextPlanet = () => {
+    const nextIndex = (currentPlanetIndex + 1) % planets.length;
+    goToPlanet(nextIndex);
+  };
+
+  const prevPlanet = () => {
+    const prevIndex = (currentPlanetIndex - 1 + planets.length) % planets.length;
+    goToPlanet(prevIndex);
+  };
 
   return (
     <div className="hero">
-      <p className="journey">Welcome Traveler</p>
-      <h2>What journey shall we embark on?</h2>
+      <div className="train-journey">
+        <div className="planet-title-section">
+          <h1 className="planet-name">{currentPlanet.name}</h1>
+          <h2 className="journey-subtitle">{currentPlanet.title}</h2>
+          <p className="planet-description">{currentPlanet.description}</p>
+        </div>
 
-      <div className="interest-list">
-        {cards.map((card) => (
-          <JourneyCard
-            key={card.id}
-            title={card.title}
-            short={card.short}
-            long={card.long}
-            onOpen={() => setOpenCardId(card.id)}
+        <div className="journey-scene">
+          <Train isVisible={isTrainVisible} planetColor={currentPlanet.color} />
+
+          <div className="planet-selector"></div>
+            {planets.map((planet, index) => (
+              <Planet
+                key={planet.id}
+                planet={planet}
+                isActive={index === currentPlanetIndex}
+                onClick={() => goToPlanet(index)}
+              />
+            ))}
+          </div>
+        </div>
+        
+        <div className="journey-controls">
+          <button className="nav-btn prev" onClick={prevPlanet}>
+            ← Previous Planet
+          </button>
+          <button
+            className="explore-btn"
+            onClick={() => setSelectedPlanet(currentPlanet)}
+          >
+            Explore {currentPlanet.title}
+          </button>
+          <button className="nav-btn next" onClick={nextPlanet}>
+            Next Planet →
+          </button>
+        </div>
+
+        {selectedPlanet && (
+          <Modal
+            title={selectedPlanet.title}
+            long={selectedPlanet.long}
+            onClose={() => setSelectedPlanet(null)}
           />
-        ))}
-      </div>
-
-      {selectedCard && (
-        <Modal
-          title={selectedCard.title}
-          long={selectedCard.long}
-          onClose={() => setOpenCardId(null)}
-        />
-      )}
+        )}
     </div>
   );
 }
 
 // Mount React
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<JourneyApp />);
+root.render(<TrainJourney />);
