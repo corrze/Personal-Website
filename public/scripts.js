@@ -1,5 +1,5 @@
 const observerOptions = {threshold: 0.5, rootMargin: '0px 0px -25% 0px'};
-const loader = document.getElementById('loading-screen');
+
 
 // Create an IntersectionObserver to handle the fade-in effect
 const observer = new IntersectionObserver((entries) => {
@@ -58,32 +58,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Fade out loader after page load
-// This will add a fade-out effect to the loading screen once the page has fully loaded
-window.addEventListener('load', () => {
-    loader.classList.add('fade-out');
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 500); // Adjust the timeout to match the CSS transition duration
-});
 
-document.querySelectorAll('a[href]').forEach(link => {
-    if (link.target === '_blank' || 
-        link.getAttribute('href').startsWith('#') ||
-        link.getAttribute('href').startsWith('mailto:'))
-    return; // Skip links that open in a new tab or are internal links
-        
-    // Add click event listener to open links in a new tab
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const href = link.getAttribute('href');
-        loader.style.display = 'flex';
-        loader.classList.remove('fade-out');
-        setTimeout(() => {
-            window.location.href = href;
-        }, 300); // Adjust the delay as needed
-    });
-});
+
 
 function toggleExpand(card) {
     document.querySelectorAll('.class-card.expanded').forEach(c => {

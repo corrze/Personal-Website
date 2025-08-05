@@ -13,45 +13,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-/* Loading screen */
-.loading-overlay {
-    position: fixed;
-    inset: 0;
-    background: #0f0f23;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 9999;
-    transition: opacity 0.5s ease;
-}
 
-.loading-overlay.fade-out {
-    opacity: 0;
-    pointer-events: none; /* Prevent interaction when faded out */
-}
-
-.spinner {
-    width: 48px;
-    height: 48px;
-    border: 5px solid rgba(255,255,255,0.1);
-    border-top-color: #60a5fa;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-.loading-text {
-    margin-top: 1rem;
-    color: #e4e4e7;
-    font-size: 1.2rem;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 /* Background particles */
 .bg-particles {
@@ -506,8 +468,6 @@ main {
     font-weight: 500;
 }
 
-
-
 .modal.fade-out {
     opacity: 0;
 }
@@ -522,6 +482,10 @@ main {
     padding-top: 10vh;
     background: rgba(0, 0, 0, 0.7); /* Fixed typo: was "gba" */
     backdrop-filter: blur(5px); /* Optional: adds blur effect */
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Seogoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #e4e4e7;
+    line-height: 1.6;
 }
 
 .modal.fade-out {
@@ -540,7 +504,31 @@ main {
     overflow-y: auto;
     animation: slideIn 0.4s ease-out forwards;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+
+    font-family: inherit;
+    color: inherit;
+    line-height: inherit;
 }
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #e4e4e7;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
 
 .modal .close {
     position: absolute;
@@ -551,6 +539,7 @@ main {
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .modal .close:hover {
@@ -581,6 +570,96 @@ main {
         opacity: 0;
         transform: translateY(50px);
     }
+}
+
+/* Prevents body scroll when modal open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* --------------------- TRAIN --------------------- */
+.train-journey {
+    text-align: center;
+    padding: 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.planet-title-section {
+    margin-bottom: 2rem;
+}
+
+.planet-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    marigin-bottom: 0.5rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out;
+}
+
+.journey-subtitle {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #e4e4e7;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.planet-desciption {
+    font-size: 1.1rem;
+    color: #cdb5e1;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.journey-scene {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.train-container {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+
+.train-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.train {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.train-engine {
+    width: 80px;
+    height: 60px;
+    background: linear-gradient(135deg, #374151, #4b5563);
+    border-radius: 8px 8px 4px 4px;
+    border: 3px solid #60a5fa;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.train-window {
+    width:20px;
+    height: 15px;
 }
 
 footer {
