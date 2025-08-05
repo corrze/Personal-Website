@@ -246,7 +246,7 @@ function TrainJourney() {
             className="explore-btn"
             onClick={() => setSelectedPlanet(currentPlanet)}
           >
-            Explore {currentPlanet.title}
+            Explore This Planet
           </button>
           <button className="nav-btn next" onClick={nextPlanet}>
             Next Planet →
